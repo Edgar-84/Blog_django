@@ -4,7 +4,7 @@ services:
   dm_db:
     image: postgres:10.1-alpine
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - database:/var/lib/postgresql/data/
     ports:
       - 5435:5432
   dm_web:
@@ -20,4 +20,4 @@ services:
       - dm_db
 
 volumes:
-  postgres_data:
+  database:
